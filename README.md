@@ -1,120 +1,100 @@
-BULLDOZER-PRICE-PREDICTION
-Forecasts that Drive Smarter Bulldozer Sales Decisions
+<div align="center">
+  <h1>🚜 BULLDOZER-PRICE-PREDICTION</h1>
+  <p><i>Forecasts that Drive Smarter Bulldozer Sales Decisions</i></p>
+</div>
 
 <br>
 
-<a href="[your_github_link]"><img alt="Last Commit" src="https://www.google.com/search?q=https://img.shields.io/github/last-commit/Mubashir-Rao/Bulldozer-Price-Prediction"></a>
-<img alt="Jupyter Notebook" src="https://www.google.com/search?q=https://img.shields.io/badge/Notebook-Jupyter-orange">
-<img alt="Python Language" src="https://www.google.com/search?q=https://img.shields.io/badge/Language-Python-blue">
+<div align="center">
+  <a href="YOUR_GITHUB_LINK">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/brej-29/bulldozer-price-prediction">
+  </a>
+  <img alt="Jupyter Notebook" src="https://img.shields.io/badge/Notebook-Jupyter-orange">
+  <img alt="Python Language" src="https://img.shields.io/badge/Language-Python-blue">
+</div>
 
-Built with the tools and technologies:
+<div align="center">
+  <br>
+  <b>Built with the tools and technologies:</b>
+  <br>
+  <br>
+  <code>Python</code> | <code>NumPy</code> | <code>Pandas</code> | <code>Matplotlib</code> | <code>Scikit-Learn</code> | <code>Jupyter Notebook</code>
+</div>
 
-Python
+---
 
-NumPy
+## **Table of Contents**
+* [Overview](#overview)
+* [Getting Started](#getting-started)
+    * [Prerequisites](#prerequisites)
+    * [Installation](#installation)
+    * [Usage](#usage)
+* [Data Exploration & Preprocessing](#data-exploration--preprocessing)
+* [Modeling & Evaluation](#modeling--evaluation)
+* [Model Deployment](#model-deployment)
+* [License](#license)
+* [Contact](#contact)
 
-Pandas
+---
 
-Matplotlib
+## **Overview**
 
-Scikit-Learn
+This project is an entry for the <b>Kaggle competition, "Blue Book for Bulldozers"</b>. The core objective is to predict the auction sale price of bulldozers using a comprehensive dataset of historical sales records and equipment specifications.
 
-Jupyter Notebook
-
-Table of Contents
-Overview
-
-Getting Started
-
-Prerequisites
-
-Installation
-
-Usage
-
-Data Exploration & Preprocessing
-
-Modeling & Evaluation
-
-Model Deployment
-
-License
-
-Contact
-
-Overview
-This project is an entry for the Kaggle competition, "Blue Book for Bulldozers". The objective is to predict the sale price of bulldozers sold at auction based on historical sales data.
-
-The solution is an end-to-end machine learning pipeline that:
-
-Handles time-series data.
-
-Cleans and preprocesses data using scikit-learn pipelines.
-
-Explores and visualizes data to uncover insights. * Trains and evaluates a variety of regression models.
-
-Tunes model hyperparameters using RandomizedSearchCV.
-
-Exports the trained model for future use.
+The solution implements an <b>end-to-end machine learning pipeline</b> encompassing:
+* <b>Handling of time-series data</b>.
+* <b>Robust data cleaning and preprocessing</b> utilizing <code>scikit-learn</code> Pipelines.
+* In-depth <b>exploratory data analysis</b> with insightful visualizations.
+* Training and evaluation of diverse <b>regression models</b>.
+* Efficient <b>hyperparameter tuning</b> using <code>RandomizedSearchCV</code>.
+* Persistence of the optimal trained model for seamless future use.
 
 <br>
 
-Exploratory Data Analysis
-The initial data exploration revealed several key insights:
+### **Exploratory Data Analysis Highlights**
 
-Data Distribution: The SalePrice is highly skewed to the right, indicating most sales are at lower prices.
+- **Sale Price Distribution:** The `SalePrice` exhibits a significant <b>right skew</b>, indicating a higher frequency of lower-priced sales. - **Missing Data Handling:** Strategic imputation techniques were applied to address missing values across various features.
+- **Time-Based Analysis:**
+    - No strong linear correlation was observed between `SaleDate` and `SalePrice`, suggesting other features are more influential.     - Median `SalePrice` by `SaleMonth` analysis suggests potential <b>seasonal influences</b>.     - <b>State-by-State Analysis</b>: The median sale price varies significantly across different states, with some states having consistently higher or lower prices than the national median. 
+---
 
-Missing Data: Several columns contain a significant number of missing values that require imputation.
+## **Getting Started**
 
-Time-based Relationships:
-
-A plot of SalePrice vs. SaleDate showed no clear linear correlation, suggesting other features are more influential.
-
-The median SalePrice by SaleMonth shows some seasonality, with prices being higher in the early part of the year.
-
-State-by-State Analysis: The median sale price varies significantly across different states, with some states having consistently higher or lower prices than the national median.
-
-Getting Started
-Prerequisites
+### **Prerequisites**
 To run this notebook, you will need the following libraries installed:
+* `pandas`
+* `numpy`
+* `matplotlib`
+* `scikit-learn`
+* `joblib`
+* `pyarrow` (or `fastparquet`)
 
-pandas
-
-numpy
-
-matplotlib
-
-scikit-learn
-
-joblib
-
-pyarrow (or fastparquet)
-
-Installation
-You can install all necessary libraries using pip:
-
-Bash
-
+### **Installation**
+You can install all necessary libraries using `pip`:
 pip install pandas numpy matplotlib scikit-learn joblib pyarrow
-Usage
-Clone the repository: git clone https://github.com/Mubashir-Rao/Bulldozer-Price-Prediction.git
 
-Navigate to the project directory: cd Bulldozer-Price-Prediction
+### **Usage**
+1. Clone the repository: `git clone https://github.com/brej-29/bulldozer-price-prediction.git`
+2. Navigate to the project directory: `cd bulldozer-price-prediction`
+3. Open the Jupyter Notebook: `jupyter notebook`
+4. Run the cells in the notebook to reproduce the analysis and model.
 
-Open the Jupyter Notebook: jupyter notebook
+---
 
-Run the cells in the notebook to reproduce the analysis and model.
+## **Modeling & Evaluation**
+A <b>`scikit-learn` Pipeline</b> was constructed to seamlessly integrate data preprocessing with various regression models. Model performance was rigorously evaluated using key metrics such as <b>Mean Absolute Error (MAE)</b> and the <b>R-squared (R²) score</b>.
 
-Modeling & Evaluation
-A scikit-learn Pipeline was used to streamline the workflow, combining data preprocessing with model training. The models were evaluated using Mean Absolute Error (MAE) and the R-squared (R 
-2
- ) score.
+---
 
-Model Deployment
-The final trained model is saved using joblib for future use. This allows the model to be loaded and used for new predictions without the need for retraining.
+## **Model Deployment**
+The final, fine-tuned model is persisted using `joblib`, enabling easy loading and utilization for future price predictions on new bulldozer data.
 
-License
-This project is licensed under the MIT License. See the LICENSE.md file for details.
+---
 
-Contact
-If you have any questions or feedback, feel free to reach out to me via my [LinkedIn Profile]([Your LinkedIn Profile Link]).
+## **License**
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## **Contact**
+If you have any questions or feedback, feel free to reach out to me via my [LinkedIn Profile](https://www.linkedin.com/in/brejesh-balakrishnan-7855051b9/).
