@@ -6,8 +6,8 @@
 <br>
 
 <div align="center">
-  <a href="YOUR_GITHUB_LINK">
-    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/brej-29/bulldozer-price-prediction">
+  <a href="https://github.com/brej-29">
+    <img alt="Last Commit" src="https://img.shields.io/github/last-commit/brej-29/Logicmojo-AIML-Assignments-bulldozer-price-prediction">
   </a>
   <img alt="Jupyter Notebook" src="https://img.shields.io/badge/Notebook-Jupyter-orange">
   <img alt="Python Language" src="https://img.shields.io/badge/Language-Python-blue">
